@@ -37,3 +37,4 @@ nosetests.xml
 # Komodo
 .komodotools/
 *.komodoproject
+Text/.DS_Store
