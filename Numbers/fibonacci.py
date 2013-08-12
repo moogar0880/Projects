@@ -1,8 +1,8 @@
-# -*- coding: cp1252 -*-
-# Fibonacci Sequence – Enter a number and have the
-# program generate the Fibonacci sequence to that number
-# or to the Nth number
-
+'''
+Enter a number and have the program generate the
+Fibonacci sequence to that number or to the Nth
+number
+'''
 n = int(raw_input('How many numbers do you need? '))
 series = [1]
 

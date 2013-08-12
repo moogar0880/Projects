@@ -1,22 +1,29 @@
-# -*- coding: cp1252 -*-
 """
-Calculator – A simple calculator to do basic operators.
+A simple calculator to do basic operators.
+
+Note: currently does not support order of operations
 """
-
-if __name__ == '__main__':
-    num1 = input("Number 1: ")
-    num2 = input("Number 2: ")
-    op = raw_input("Operation (+, -, /, *): ")
-
-    if op not in '+-/*':
-        print "Invalid operator"
+equation   = raw_input("Please enter a mathematical equation: ").split(' ')
+numbers    = []
+operations = []
+for i, x in enumerate(equation):
+    if i % 2 == 0:
+        numbers.append(x)
     else:
-        if op == '+':
-            res = num1 + num2
-        elif op == '-':
-            res = num1 - num2
-        elif op == '/':
-            res = num1 / num2
-        elif op == '*':
-            res = num1 * num2
-        print "%d %s %d = %d" % (num1, op, num2, res)
+        operations.append(x)
+
+current = int(numbers.pop(0))
+while len(numbers) > 0:
+    op = operations.pop(0)
+    if op == '+':
+        current += int(numbers.pop(0))
+    elif op == '-':
+        current -= int(numbers.pop(0))
+    elif op == '/':
+        current /= int(numbers.pop(0))
+    elif op == '*':
+        current *= int(numbers.pop(0))
+    else:
+        print op, "is an unsupported operator"
+        break
+print "{} = {}".format(equation,current)

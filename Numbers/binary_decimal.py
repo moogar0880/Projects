@@ -3,18 +3,16 @@ Binary to Decimal and Back Converter
 Develop a converter to convert a decimal number to binary
 or a binary number to its decimal equivalent.
 """
-
+import math
 def binary_to_decimal(binary):
     """
     Converts a binary number into a decimal number.
     """
     decimal = 0
     index = 0
-    while binary > 0:
-        last = binary % 10
-        binary = binary / 10
-        decimal += (last * (2 ** index))
-        index += 1
+    for x in range(len(binary)):
+        if int(binary[x]) == 1:
+            decimal += math.pow(2,x)
     return decimal
 
 def decimal_to_binary(decimal):
@@ -30,21 +28,18 @@ def decimal_to_binary(decimal):
     binary = "".join(remainders)
     return binary
 
-if __name__ == '__main__':
-    print """
-    1. Binary to Decimal
-    2. Decimal to Binary\n
-    """
+print """
+1. Binary to Decimal
+2. Decimal to Binary\n
+"""
 
-    choice = input("Make a choice: ")
+choice = input("Make a choice: ")
 
-    if choice == 1:
-        binary = input("Binary to convert: ")
-        print "The binary number %d in decimal is %d" % \
-              (binary, binary_to_decimal(binary))
-    elif choice == 2:
-        decimal = input("Decimal to convert: ")
-        print "The decimal number %d in binary is %s" % \
-              (decimal, decimal_to_binary(decimal))
-    else:
-        print "Invalid choice"
+if choice == 1:
+    binary = input("Binary to convert: ")
+    print "The binary number %d in decimal is %d" % (binary, binary_to_decimal(str(binary)))
+elif choice == 2:
+    decimal = input("Decimal to convert: ")
+    print "The decimal number %d in binary is %s" % (decimal, decimal_to_binary(decimal))
+else:
+    print "Invalid choice"
