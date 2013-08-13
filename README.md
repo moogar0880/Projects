@@ -1,35 +1,6 @@
 Mega Project List
 ========
 
-#### [RECOGNITION](https://github.com/thekarangoel/Projects/tree/master/RECOGNITION)
-
-This repo is in the top 5 on GitHub on [July 14 2013](https://raw.github.com/thekarangoel/Projects/master/RECOGNITION/top5-2013-07-14.png). (And again on [July 22, 2013](https://raw.github.com/thekarangoel/Projects/master/RECOGNITION/top5-2013-07-22%2013_10_30.png), and again on [July 23, 2013](https://raw.github.com/thekarangoel/Projects/master/RECOGNITION/top5-2013-07-23.png).) And on [weekly](https://raw.github.com/thekarangoel/Projects/master/RECOGNITION/top5-weekly-2013-07-22.png) [list](https://github.com/thekarangoel/Projects/blob/master/RECOGNITION/top5-weekly-2013-07-23.png) during the week of July 2013.
-
-![July 22, 2013](https://raw.github.com/thekarangoel/Projects/master/RECOGNITION/top5-2013-07-22%2013_10_30.png)
-
-===============================
-
-### [CONTRIBUTING] (https://github.com/thekarangoel/Projects/blob/master/CONTRIBUTING.md)
-
-See ways of [contributing](https://github.com/thekarangoel/Projects/blob/master/CONTRIBUTING.md) to this repo. You can contribute solutions to existing problems, add new projects or remove existing ones. Make sure you follow all instructions properly.
-
-================================
-
-Some details about this repo:
-
-* I will use Python to solve these. Why? Because I want to learn the language quickly.
-* I have no interest in making games, so I'm excluding those from the list below.
-* I'm not interested in networking, so I *might* skip all (or some) of them.
-* The projects will not be made in the order posted.
-* I may not be able to complete all of them. 
-* My method of solving them may not be the best. If you do not like my algorithm(s), please add a comment for the file/commit or open an issue, and I'll try to improve.
-
-I will link to each project that I complete. Some will be in this same repo, some bigger ones will have dedicated repos.
-
-To get started, fork this repo, delete this README and rename [*README-scratch.md*](https://github.com/thekarangoel/Projects/blob/master/README-scratch.md) to *README.md*.
-
-===============================
-
 Numbers
 ---------
 
