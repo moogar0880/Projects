@@ -21,21 +21,18 @@ then the number is valid according to the Luhn formula; else it is
 not valid.
 """
 
-if __name__ == '__main__':
-    number = raw_input('Enter the credit card number of check: ').replace(' ', '')
-    #if not number.isdigit():
-    #    raise Exception('Invalid credit card number. Make sure it\'s all digits (with optional spaces in between).'
+number = raw_input('Enter the credit card number of check: ').replace(' ', '')
 
-    digits = [int(char) for char in number]
+digits = [int(char) for char in number]
 
-    # double alternate digits (step 1)
-    doubled = [(digit * 2) if (i % 2 == 0) else digit \
-           for (i, digit) in enumerate(digits)] # i <3 python
-    # sum digits of number > 10 (step 2)
-    summed = [num if num < 10 else sum([int(dig) for dig in str(num)]) \
-              for num in doubled] # i <3 python ** 2
-    # step 3
-    if sum(summed) % 10 == 0:
-        print 'The number is valid'
-    else:
-        print 'The number is invalid'
+# double alternate digits (step 1)
+doubled = [(digit * 2) if (i % 2 == 0) else digit \
+       for (i, digit) in enumerate(digits)] # i <3 python
+# sum digits of number > 10 (step 2)
+summed = [num if num < 10 else sum([int(dig) for dig in str(num)]) \
+          for num in doubled] # i <3 python ** 2
+# step 3
+if sum(summed) % 10 == 0:
+    print 'The number is valid'
+else:
+    print 'The number is invalid'
