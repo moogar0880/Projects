@@ -7,17 +7,16 @@ import time
 import wave
 
 def play(hh, mm):
-    not_alarmed = 1
+    not_alarmed = True
 
     while(not_alarmed):
         cur_time = list(time.localtime()) # get the time right now
-        hour = cur_time[3] # find the hour
+        hour = cur_time[3]   # find the hour
         minute = cur_time[4] # and the minute
         if hour == hh and minute == mm:
-            song = pyglet.media.load('bin/sound.wav')
-            song.play() # play the sound
-            pyglet.app.run()
-            not_alarmed = 0 # stop the loop
+            song = wave.open('bin/sound.wav')
+            #song.play() # play the sound
+            not_alarmed = False
 
 print "1. Play sound after X minutes\n2. Play sound at an exact time"
 choice = input('What do you want to do? ')
